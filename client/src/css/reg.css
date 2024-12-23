@@ -1,0 +1,14 @@
+/* Центрирование контента в Card */
+.card {
+    margin: 0 auto; /* Центрирование по горизонтали */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Дополнительная тень */
+  }
+  
+  body, html {
+    height: 100%; /* Убедимся, что высота страницы занимает 100% */
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    background-color: #f7f9fc; /* Добавляем фоновый цвет */
+  }
+  

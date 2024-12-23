@@ -1,0 +1,160 @@
+css
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+nav {
+    height: 50px;
+    width: 100%;
+    background-color: #23a03894;
+    position: fixed;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    top: 0; /* Обеспечиваем привязку к верхнему краю */
+    left: 0;
+}
+
+p {
+    margin: 20px;
+}
+
+.ham-menu {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.ham-menu span {
+    height: 4px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 20%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 80%;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+  .login-button {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    z-index: 1000; /* Убедимся, что кнопка находится поверх других элементов */
+  }
+  
+  .login-button button {
+    background-color: #23a0389b; /* Зеленый цвет */
+    color: #000000; /* Черный текст */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .login-button button:hover {
+    background-color: #1a7f2c; /* Темно-зеленый цвет при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+    transform: scale(1.05); /* Увеличение кнопки на 5% при наведении */
+  }
+  
+  .login-button button:active {
+    background-color: #146022; /* Еще более темный цвет при активации */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Уменьшенная тень при активации */
+    transform: scale(0.98); /* Уменьшение кнопки на 2% при активации */
+  }
+  .main-content {
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: flex-start; /* Прижимаем к верху */
+    margin-left: 50px; /* Учитываем ширину бокового меню */
+    padding-top: 10px; /* Добавляем отступ сверху */
+  }
+  
+  .main-content img {
+    max-width: 400px; /* Максимальная ширина фото */
+    max-height: 100px; /* Максимальная высота фото */
+    border-radius: 10px; /* Закругленные углы */
+    object-fit: contain; /* Фото подстраивается под размеры */
+  }
+  
+  .info-container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center; /* Центрируем контейнеры по горизонтали */
+    flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
+    margin: 0 10px; /* Уменьшаем боковые отступы */
+    gap: 20px; /* Расстояние между контейнерами */
+  }
+  
+  .info-box {
+    flex: 1 1 calc(50% - 20px); /* Две колонки в ряд, с учетом отступов */
+    max-width: calc(50% - 20px); /* Увеличиваем ширину коробки */
+    background-color: #fff; /* Белый фон */
+    color: #000; /* Черный текст */
+    border: 2px solid #000; /* Черная обводка */
+    border-radius: 20px; /* Скругление углов */
+    padding: 15px; /* Уменьшаем внутренние отступы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+  
+.info-box p {
+  margin-bottom: 10px; /* Отступ между текстом и картинкой */
+  font-size: 24px; /* Уменьшаем размер шрифта */
+  text-align: center; /* Выравниваем текст по центру */
+}
+
+.info-box p .highlight {
+  color: red; /* Красный цвет для выделенного текста */
+  font-size: 30px; /* Увеличиваем размер выделенного текста */
+}
+
+.info-box img {
+  max-width: 120px; /* Уменьшаем размер картинки */
+  border-radius: 10px;
+}
+
+/* Стили для нижнего текста */
+.bottom_inscription {
+  margin-top: 10px !important; /* Отступ сверху */
+  font-size: 18px !important; /* Уменьшаем размер шрифта */
+  font-weight: normal !important; /* Убираем жирность */
+}

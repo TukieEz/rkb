@@ -1,0 +1,65 @@
+.menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 50px;
+    left: 0;
+    display: flex;
+    transform: translateX(-115%);
+    transition: 0.3s ease;
+}
+.menu.active{
+    transform: translateX(0);
+    transition: 0.3s ease;
+}
+.blur {
+    height: 100vh;
+    width: 100vw;
+    left: 15%;
+    backdrop-filter: blur(2px);
+    position: absolute;
+}
+
+.off-screen-menu {
+    width: 15%; /* Ширина меню */
+    height: 100%;
+    background-color: #23a03894;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0 0 20px;
+    font-size: 24px;
+    transition: 0.3s ease;
+  }
+  
+  ul li {
+    margin-bottom: 10px; /* Добавляем расстояние между элементами */
+    color: black; /* Цвет текста и иконок черный */
+    transition: transform 0.3s ease; /* Плавный переход для увеличения */
+    display: flex;
+    align-items: center;
+  }
+  
+  ul li a {
+    color: black; /* Цвет текста черный */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Плавный переход для увеличения */
+  }
+  
+  ul li:hover,
+  ul li:hover a {
+    transform: scale(1.05); /* Увеличение текста и иконок в 1.2 раза при наведении */
+  }
+  
+  ul li .material-symbols-outlined {
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    transition: transform 0.3s ease; /* Плавный переход для увеличения */
+  }
+ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-top: 0;
+}
